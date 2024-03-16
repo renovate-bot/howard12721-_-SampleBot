@@ -1,4 +1,4 @@
 docker-compose.yml
 debug/*
 
-*/__pycache__/*
+src/cogs/__pycache__/*
