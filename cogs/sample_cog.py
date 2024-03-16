@@ -7,4 +7,4 @@ class SampleCog(commands.Cog):
     
     @commands.Cog.listener()
     async def on_ready(self):
-        print("cog is ready!")
+        print("sample cog is ready")

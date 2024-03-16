@@ -2,6 +2,6 @@ version: "3.9"
 services:
   bot:
     container_name: sample-bot
-    image: sample-bot
+    image: ghcr.io/howard12721/sample-bot:latest
     volumes:
       - ./config.json:/app/config.json
