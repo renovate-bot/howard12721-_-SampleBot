@@ -12,6 +12,9 @@ class SampleBot(commands.Bot):
 
     async def on_ready(self):
         print(f'Logged in as {self.user.name} ({self.user.id})')
+        
+    async def setup_hook(self) -> None:
+        await bot.add_cog(SampleCog(bot))
 
 if __name__ == "__main__":
     
@@ -24,7 +27,5 @@ if __name__ == "__main__":
     token = data['token']
     
     bot = SampleBot(command_prefix='!', intents=discord.Intents.all())
-    
-    bot.add_cog(SampleCog(bot))
     
     bot.run(token=token)
