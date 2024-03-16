@@ -2,8 +2,6 @@ import discord
 from discord.ext import commands
 from cogs.sample_cog import SampleCog
 import os
-import json
-import shutil
 
 class SampleBot(commands.Bot):
     
@@ -18,14 +16,6 @@ class SampleBot(commands.Bot):
 
 if __name__ == "__main__":
     
-    if not os.path.exists('./config.json'):
-        shutil.copy('./config.json.template', './config.json')
-        
-    with open('./config.json', 'r') as f:
-        data = json.load(f)
-
-    token = data['token']
-    
     bot = SampleBot(command_prefix='!', intents=discord.Intents.all())
     
-    bot.run(token=token)
+    bot.run(token=os.getenv("TOKEN"))
