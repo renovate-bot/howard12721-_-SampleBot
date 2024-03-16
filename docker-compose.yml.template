@@ -5,5 +5,5 @@ services:
     image: ghcr.io/howard12721/sample-bot:latest
     volumes:
       - ./config.json:/app/config.json
-    environments:
+    environment:
       - TOKEN="PUT YOUR TOKEN HERE"
