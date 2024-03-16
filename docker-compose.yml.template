@@ -6,4 +6,4 @@ services:
     volumes:
       - ./config.json:/app/config.json
     environment:
-      - TOKEN="PUT YOUR TOKEN HERE"
+      - TOKEN=PUT_YOUR_TOKEN_HERE
